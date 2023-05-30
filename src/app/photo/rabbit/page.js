@@ -1,3 +1,9 @@
+const rabbitHeader = <h1>Hello, photo-rabbit Page!</h1>
+
 export default function rabbit() {
-  return <h1>Hello, photo-rabbit Page!</h1>;
-}
+  return (
+    <div>
+      {rabbitHeader}
+    </div>
+  );
+};
