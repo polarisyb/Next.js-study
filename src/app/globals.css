@@ -2,3 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: white;
+  --foreground: #1f2937;
+}
+
+/* [data-theme='dark'] {
+  --background: #1f2937;
+  --foreground: white;
+} */
+
+@layer utilities {
+  [data-theme='dark'] {
+    --background: #f2f2f2;
+    --foreground: white;
+  }
+
+  [data-theme='dark'] .darkmode-span{
+    @apply text-white;
+  }
+
+  [data-theme='dark'] .darkmode-h1{
+    @apply text-white;
+  }
+
+  [data-theme='dark'] .darkmode-footerspan{
+    @apply text-white;
+  }
+
+  [data-theme='dark'] .darkmode-headerlink{
+    @apply text-white;
+  }
+
+  [data-theme='dark'] .bg-primary{
+    @apply bg-slate-800;
+  }
+  
+}

@@ -1,6 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 
+import { Providers } from './providers'
+
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 
@@ -18,14 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <section className="flex min-h-screen flex-col items-center justify-center text-gray-600 body-font">
-          <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-            {children}
-          </div>
-        </section>
-        <Footer />
+      <body className={inter.className} >
+        <Providers>
+          <Header />
+          <section className="flex min-h-screen flex-col items-center justify-center text-gray-600 body-font">
+            <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+              {children}
+            </div>
+          </section>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
