@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Section from '@/components/section'
+import Hero from '@/components/home/hero'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <Section />
+        <section className="flex min-h-screen flex-col items-center justify-center text-gray-600 body-font">
+          <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            {children}
+          </div>
+        </section>
         <Footer />
       </body>
     </html>
